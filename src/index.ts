@@ -10,6 +10,7 @@ export * from './middlewares/error-handler';
 export * from './middlewares/require-auth';
 export * from './middlewares/validate-request';
 
-export * from './constants/auth/user.interfaces'
+export * from './constants/auth/user.interfaces';
+export * from './constants/globals';
 
-export * from './services/authentication.service'
+export * from './services/authentication.service';
