@@ -24,6 +24,7 @@ __exportStar(require("./middlewares/current-user"), exports);
 __exportStar(require("./middlewares/error-handler"), exports);
 __exportStar(require("./middlewares/require-auth"), exports);
 __exportStar(require("./middlewares/validate-request"), exports);
+__exportStar(require("./middlewares/uploader"), exports);
 __exportStar(require("./constants/auth/user.interfaces"), exports);
 __exportStar(require("./constants/seller/product.interfaces"), exports);
 __exportStar(require("./constants/globals"), exports);
