@@ -35,7 +35,7 @@ export class Uploader {
     },
   })
 
-  public defaultUploadDir = '/upload'
+  public defaultUploadDir = 'upload/'
 
   uploadMultipleFiles(options: UploaderMiddlewareOptions) {
     return multer({storage: this.storage, fileFilter: this.fileFilter(options.types)})

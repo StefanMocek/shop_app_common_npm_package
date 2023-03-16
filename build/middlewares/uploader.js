@@ -36,7 +36,7 @@ class Uploader {
                 cb(null, file.filename + Date.now());
             },
         });
-        this.defaultUploadDir = '/upload';
+        this.defaultUploadDir = 'upload/';
     }
     uploadMultipleFiles(options) {
         return (0, multer_1.default)({ storage: this.storage, fileFilter: this.fileFilter(options.types) })
