@@ -13,6 +13,8 @@ export * from './middlewares/uploader';
 
 export * from './constants/auth/user.interfaces';
 export * from './constants/seller/product.interfaces';
+export * from './constants/buyer/cart-product.interfaces';
+export * from './constants/buyer/cart.interfaces';
 export * from './constants/globals';
 
 export * from './services/authentication.service';
