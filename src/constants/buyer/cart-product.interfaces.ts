@@ -4,7 +4,7 @@ import {CartDoc} from './cart.interfaces';
 
 export interface CartProductDoc extends mongoose.Document {
   cart: CartDoc | string,
-  product: ProductDoc | string,
+  product: ProductDoc,
   quantity: number
 };
 
