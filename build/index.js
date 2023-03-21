@@ -29,5 +29,6 @@ __exportStar(require("./constants/auth/user.interfaces"), exports);
 __exportStar(require("./constants/seller/product.interfaces"), exports);
 __exportStar(require("./constants/buyer/cart-product.interfaces"), exports);
 __exportStar(require("./constants/buyer/cart.interfaces"), exports);
+__exportStar(require("./constants/buyer/order.interfaces"), exports);
 __exportStar(require("./constants/globals"), exports);
 __exportStar(require("./services/authentication.service"), exports);
