@@ -33,8 +33,8 @@ class Uploader {
                 cb(null, this.uploadDir || this.defaultUploadDir);
             },
             filename: (req, file, cb) => {
-                cb(null, file.filename + Date.now());
-            },
+                cb(null, file.fieldname + Date.now());
+            }
         });
         this.defaultUploadDir = 'upload/';
     }

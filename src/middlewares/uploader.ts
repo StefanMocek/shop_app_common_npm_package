@@ -28,22 +28,22 @@ export class Uploader {
 
   public storage = multer.diskStorage({
     destination: (req, file, cb) => {
-      cb(null, this.uploadDir || this.defaultUploadDir)
+        cb(null, this.uploadDir || this.defaultUploadDir)
     },
     filename: (req, file, cb) => {
-      cb(null, file.filename + Date.now()) 
-    },
+        cb(null, file.fieldname + Date.now())
+    }
   })
 
   public defaultUploadDir = 'upload/'
 
   uploadMultipleFiles(options: UploaderMiddlewareOptions) {
-    return multer({storage: this.storage, fileFilter: this.fileFilter(options.types)})
-      .array(options.fieldName || 'file')
+    return multer({ storage: this.storage, fileFilter: this.fileFilter(options.types) })
+        .array(options.fieldName || 'file');
   }
 
-  uploadSingleFile(options: UploaderMiddlewareOptions){
-    return multer({storage: this.storage, fileFilter: this.fileFilter(options.types)})
-      .single(options.fieldName || 'file')
+  uploadSingleFile(options: UploaderMiddlewareOptions) {
+    return multer({ storage: this.storage, fileFilter: this.fileFilter(options.types) })
+        .single(options.fieldName || 'file')
   }
 }
